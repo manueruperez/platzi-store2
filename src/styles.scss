@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.productWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width:576px){
+    .productWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width:769px){
+    .productWrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

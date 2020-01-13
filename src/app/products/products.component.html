@@ -1,0 +1,8 @@
+<div class="productWrapper">
+    <app-product
+        *ngFor="let product of products"
+        (selectedProduct)="selected($event)"
+        [product]="product"
+    ></app-product
+        >
+</div>
