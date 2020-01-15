@@ -8,6 +8,10 @@ import { ProductsComponent } from './products/products.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { HighligthDirective } from './highligth.directive';
+import { CartComponent } from './cart/cart.component';
+import { HeaderComponent } from './header/header.component';
+import { BannerComponent } from './banner/banner.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -19,6 +23,10 @@ import { HighligthDirective } from './highligth.directive';
     HomeComponent,
     ContactComponent,
     HighligthDirective,
+    CartComponent,
+    HeaderComponent,
+    BannerComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
