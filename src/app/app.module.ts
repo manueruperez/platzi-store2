@@ -12,6 +12,8 @@ import { CartComponent } from './cart/cart.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -27,6 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     BannerComponent,
     FooterComponent,
+    PageNotFoundComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
