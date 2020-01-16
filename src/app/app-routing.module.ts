@@ -24,8 +24,8 @@ const routes: Routes = [
       {
         path: 'products',
         // component: ProductsComponent
-        // loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
-        loadChildren: './products/products.module#ProductsModule'
+        loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
+        // loadChildren: './products/products.module#ProductsModule'
       },
       {
         path: 'contact',
