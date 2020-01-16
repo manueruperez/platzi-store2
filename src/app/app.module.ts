@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
-import { HighligthDirective } from './highligth.directive';
+
 import { CartComponent } from './cart/cart.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
+
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 
 
@@ -24,17 +26,16 @@ import { LayoutComponent } from './layout/layout.component';
     ProductComponent,
     ProductsComponent,
     ContactComponent,
-    HighligthDirective,
     CartComponent,
-    HeaderComponent,
-    FooterComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
