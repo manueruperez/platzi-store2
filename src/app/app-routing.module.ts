@@ -32,13 +32,17 @@ const routes: Routes = [
         // component: ContactComponent
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
-      {
-        path: '**',
-        // component: PageNotFoundComponent
-        loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
-      }
     ]
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: '**',
+    // component: PageNotFoundComponent
+    loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
+  }
 ];
 
 @NgModule({

@@ -1,6 +1,52 @@
-<h2 appHighligth >{{product.title}}</h2>
+<mat-card class="product-card">
+    <mat-card-header class="header-card row center-xs cero">
+
+        <mat-card-title class="col-xs-12 header-title cero">
+            {{product.title | uppercase }}
+        </mat-card-title>
+
+        <mat-card-subtitle class="col-xs-12 header-subtitle cero">
+            {{product.price | currency:'$'}}
+        </mat-card-subtitle>
+
+    </mat-card-header>
+
+
+
+
+    <div class="row color cero">
+        <div class="col-xs-5 cero content-card">
+            <img mat-card-image 
+             class="card-img cero color" 
+             [src]="product.image" alt="">
+        </div>
+        <div class="col-xs-2 cero content-card">
+            <p class="cero">VS</p>
+        </div>
+        <div class="col-xs-5 cero content-card">
+            <img mat-card-image 
+             class="card-img cero" 
+             [src]="product.image" alt="">
+        </div>
+    </div>
+
+
+    <mat-card-content class="content-card">
+        <p>{{product.description}}</p>
+    </mat-card-content>
+    <mat-card-actions class="card-actions">
+        <a mat-flat-button [routerLink]="['/products',product.id]">Ver detalle</a>
+        <button mat-raised-button color="primary" (click)="addCart()">Agregar al carrito</button>
+    </mat-card-actions>
+</mat-card>
+
+
+
+
+
+<!-- <h2 appHighligth >{{product.title}}</h2>
 <img [src]="product.image" alt="">
 <h3>{{product.price}}</h3>
 <p>{{product.description}}</p>
 <button mat-raised-button color="primary" (click)="addCart()">Agregar al carrito</button>
-<a [routerLink]="['/products',product.id]">Ver detalle</a>
+<a [routerLink]="['/products',product.id]">Ver detalle</a> -->

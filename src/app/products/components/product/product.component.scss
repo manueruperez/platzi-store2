@@ -5,6 +5,39 @@
     display: block;
 
 }
+.cero{
+    margin: 0;
+    padding: 0;
+}
+.color{
+    background-color: yellow;
+    width: 100%;
+}
 img {
     max-width: 100%;
+}
+.product-card{
+    border: solid 1px black;
+}
+.header-card{
+    border: solid 1px black;
+}
+.header-title{
+    border: solid 1px black;
+}
+.header-subtitle{
+    border: solid 1px black;
+}
+.card-img{
+    border: solid 1px black;
+    height: 125px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.content-card{
+    border: solid 1px black;
+}
+.card-actions{
+    border: solid 1px black;
 }
