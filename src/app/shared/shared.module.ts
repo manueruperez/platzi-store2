@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CartComponent } from './../cart/cart.component';
 
 import { HighligthDirective } from './directives/highlight/highligth.directive';
 
@@ -12,7 +14,8 @@ import { HighligthDirective } from './directives/highlight/highligth.directive';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    HighligthDirective
+    HighligthDirective,
+    CartComponent
   ],
   exports: [
     HeaderComponent,
@@ -22,7 +25,8 @@ import { HighligthDirective } from './directives/highlight/highligth.directive';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

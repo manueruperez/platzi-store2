@@ -16,6 +16,7 @@ import { MatSortModule } from '@angular/material/sort';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSortModule,
     MatGridListModule,
     MatMenuModule,
+    LayoutModule,
   ],
   exports: [
     MatButtonModule,
@@ -54,6 +56,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSortModule,
     MatGridListModule,
     MatMenuModule,
+    LayoutModule,
   ]
 })
 export class MaterialModule { }
