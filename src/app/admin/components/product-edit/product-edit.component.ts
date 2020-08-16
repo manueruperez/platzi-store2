@@ -1,36 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ProductsService } from 'src/app/core/services/product/products.service';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { take } from 'rxjs/operators';
-import { Route } from '@angular/compiler/src/core';
-import { Router } from '@angular/router';
 import { MyValidators } from 'src/app/utils/validators/validators';
 
-
 @Component({
-  selector: 'app-form-product',
-  templateUrl: './form-product.component.html',
-  styleUrls: ['./form-product.component.scss']
+  selector: 'app-product-edit',
+  templateUrl: './product-edit.component.html',
+  styleUrls: ['./product-edit.component.scss']
 })
-export class FormProductComponent implements OnInit {
+export class ProductEditComponent implements OnInit {
 
   form: FormGroup;
+  id: string;
 
   constructor(
     private formBuilder: FormBuilder,
     private productSer: ProductsService,
-    private router: Router
+    private router: Router,
+    private activeRoute: ActivatedRoute,
   ) {
     this.buildForm();
    }
 
   ngOnInit() {
+    this.activeRoute.params.subscribe((params: Params) =>{
+      this.id = params.id.toString();
+      this.productSer.getProduct(this.id).subscribe(product => {
+        this.form.patchValue(product);
+      });
+    });
   }
 
   saveProduct(event: Event) {
     if (this.form.valid) {
       const product = this.form.value;
-      this.productSer.createProduct(product).pipe(take(1)).subscribe((newProduct) => {
+      this.productSer.updateProduct(this.id, product).pipe(take(1)).subscribe((newProduct) => {
         console.log(newProduct);
         this.router.navigate(['./admin/product']);
       });
