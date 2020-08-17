@@ -32,18 +32,17 @@
             </div>
             <div class="row">
                 <div class="col-xs">
-                    <!-- control 4 -->
+                    <!-- control 5 -->
                     <mat-form-field>
-                        <input placeholder="Image" formControlName="image" matInput type="text">
+                        <input placeholder="Description" formControlName="description" matInput type="text">
                     </mat-form-field>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs">
-                    <!-- control 5 -->
-                    <mat-form-field>
-                        <input placeholder="Description" formControlName="description" matInput type="text">
-                    </mat-form-field>
+                    <!-- control 4 -->
+                    <img *ngIf="(image$ | async) as image" [src]="image" alt="">
+                    <input type="file" (change)="uploadFile($event)">
                 </div>
             </div>
         </mat-card-content>
