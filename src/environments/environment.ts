@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: "esto es una prueba"
+  url: "esto es otra prueba"
 };
 
 /*
